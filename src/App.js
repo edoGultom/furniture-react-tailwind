@@ -1,9 +1,18 @@
 import "assets/css/app.css"; //trigger dari jsconfig.json
+import HomePage from "pages/HomePage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+]);
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-xl text-base">sss</h1>
+      <RouterProvider router={router} />
     </div>
   );
 }
