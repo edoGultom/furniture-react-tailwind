@@ -1,8 +1,10 @@
 import "assets/css/app.css"; //trigger dari jsconfig.json
 import Cart from "pages/Cart";
+import Congratulation from "pages/Congratulation";
 import Details from "pages/Details";
 import HomePage from "pages/HomePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import NotFound from "pages/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,14 @@ const router = createBrowserRouter([
   {
     path: "/cart",
     element: <Cart />,
+  },
+  {
+    path: "/congratulation",
+    element: <Congratulation />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
