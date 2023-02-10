@@ -6,10 +6,11 @@ import BrowseRoom from "parts/HomePage/BrowseRoom";
 import JustArrived from "parts/HomePage/JustArrived";
 import Sitemap from "parts/Sitemap";
 import React from "react";
-export default function HomePage(props) {
+
+export default function HomePage() {
   return (
     <>
-      <Header />
+      <Header theme="white" position="absolute" />
       <Hero />
       <BrowseRoom />
       <JustArrived />
