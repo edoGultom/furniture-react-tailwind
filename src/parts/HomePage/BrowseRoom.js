@@ -54,9 +54,8 @@ function Skeleton({ ratio = {} }) {
   });
 }
 export default function BrowseRoom() {
-  const { data, status, error, run, isLoading } = useAsync({
-    data: { username: "" },
-  });
+  const { data, status, error, run, isLoading } = useAsync();
+
   useEffect(() => {
     run(
       fetchData({
