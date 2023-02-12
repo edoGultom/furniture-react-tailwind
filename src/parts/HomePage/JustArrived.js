@@ -4,6 +4,18 @@ import useAsync from "helpers/hooks/useAsync";
 import { Link } from "react-router-dom";
 import Carausel from "components/Carausel";
 
+function Loading() {
+  return Array(6)
+    .fill()
+    .map((_, index) => {
+      return (
+        <div className="px-4 relative card group" key={index}>
+          <div className="w-24 h-3 bg-gray-300 mt-3 rounded-full"></div>
+          <div className="w-36 h-3 bg-gray-300 mt-2 rounded-full"></div>
+        </div>
+      );
+    });
+}
 export default function JustArrived() {
   const { data, status, error, run, isLoading } = useAsync();
   const refContainer = useRef(null);
@@ -29,7 +41,15 @@ export default function JustArrived() {
         <div className="container mx-auto" ref={refContainer}></div>
 
         {isLoading ? (
-          <div className="flex -mx-4 flex-row relative">Loading</div>
+          <div
+            className="flex -mx-4 flex-row relative"
+            style={{
+              paddingLeft:
+                refContainer.current?.getBoundingClientRect?.()?.left - 16 || 0,
+            }}
+          >
+            <Loading />
+          </div>
         ) : error ? (
           JSON.stringify(error)
         ) : data.data.length === 0 ? (
