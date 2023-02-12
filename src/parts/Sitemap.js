@@ -6,6 +6,7 @@ function SitemapLinks({ isActive, setActive, children, title }) {
     <div className="px-4 w-full md:w-2/12 mb-4 md:mb-0 accordion">
       <h5 className="text-lg font-semibold mb-2 relative">
         {title}
+        {/* set accordion jika mobile view */}
         <button
           onClick={() => setActive(isActive)}
           className={[
@@ -28,6 +29,7 @@ function SitemapLinks({ isActive, setActive, children, title }) {
             />
           </svg>
         </button>
+        {/* tutup set accordion */}
       </h5>
       <ul
         className={[
