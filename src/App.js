@@ -5,6 +5,7 @@ import Details from "pages/Details";
 import HomePage from "pages/HomePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NotFound from "pages/NotFound";
+import Provider from "helpers/hooks/useGlobalContext";
 
 const router = createBrowserRouter([
   {
@@ -35,9 +36,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App">
+    <Provider>
       <RouterProvider router={router} />
-    </div>
+    </Provider>
   );
 }
 
