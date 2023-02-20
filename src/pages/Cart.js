@@ -5,8 +5,10 @@ import Footer from "parts/Footer";
 import Sitemap from "parts/Sitemap";
 import ShoppingCart from "parts/Cart/ShoppingCart";
 import ShippingDetail from "parts/Cart/ShippingDetail";
+import useScrrolltoTop from "helpers/hooks/useScrrolltoTop";
 
 export default function Cart() {
+  useScrrolltoTop(); //kapan pun pindah halaman posisi akan selalu dipaling atas
   return (
     <>
       <Header theme="black" />

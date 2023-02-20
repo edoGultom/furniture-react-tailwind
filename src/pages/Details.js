@@ -9,6 +9,7 @@ import Suggestion from "parts/Details/Suggestion";
 import useAsync from "helpers/hooks/useAsync";
 import { useParams } from "react-router-dom";
 import fetchData from "helpers/fetch";
+import useScrrolltoTop from "helpers/hooks/useScrrolltoTop";
 
 function LoadingProductDetail() {
   return (
@@ -97,6 +98,7 @@ function LoadingSuggestion() {
 }
 
 export default function Details() {
+  useScrrolltoTop(); //kapan pun pindah halaman posisi akan selalu dipaling atas
   const { data, status, error, run, isLoading } = useAsync();
   const { idp } = useParams();
   // console.log(idp);
@@ -106,7 +108,7 @@ export default function Details() {
         url: `/api/products/${idp}`,
       })
     );
-  }, [run]);
+  }, [run, idp]);
   return (
     <>
       <Header theme="black" />

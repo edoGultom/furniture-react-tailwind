@@ -8,10 +8,12 @@ import Sitemap from "parts/Sitemap";
 import React from "react";
 import useScrollAnchor from "helpers/hooks/useScrollAnchor";
 import useModalDOM from "helpers/hooks/useModalDOM";
+import useScrrolltoTop from "helpers/hooks/useScrrolltoTop";
 
 export default function HomePage() {
   useScrollAnchor();
   useModalDOM();
+  useScrrolltoTop(); //kapan pun pindah halaman posisi akan selalu dipaling atas
   return (
     <>
       <Header theme="white" position="absolute" />
