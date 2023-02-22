@@ -9,6 +9,7 @@ export default function ShippingDetail() {
   const navigate = useNavigate();
   const { state, dispatch } = useGlobalContext();
   const { data, run, isLoading } = useAsync();
+
   useEffect(() => {
     run(
       fetchData({
@@ -16,6 +17,7 @@ export default function ShippingDetail() {
       })
     );
   }, [run]);
+
   const { state: payload, fnUpdateState } = useForm({
     completeName: "",
     emailAddress: "",
@@ -41,7 +43,7 @@ export default function ShippingDetail() {
           cart: Object.keys(state.cart).map((key) => state.cart[key]), //membuat array dari object yg ada di global state
         }),
       });
-      console.log(res);
+      console.log("subemit", res);
       if (res) {
         navigate("/congratulation");
         dispatch({
@@ -131,9 +133,9 @@ export default function ShippingDetail() {
                         </div>
                       );
                     })
-                : data?.couriers?.map((item) => {
+                : data?.couriers?.map((item, key) => {
                     return (
-                      <div className="px-2 w-6/12 h-24 mb-4">
+                      <div key={key} className="px-2 w-6/12 h-24 mb-4">
                         <button
                           type="button"
                           onClick={() =>
@@ -173,9 +175,9 @@ export default function ShippingDetail() {
                         </div>
                       );
                     })
-                : data?.payments?.map((item) => {
+                : data?.payments?.map((item, key) => {
                     return (
-                      <div className="px-2 w-6/12 h-24 mb-4">
+                      <div key={key} className="px-2 w-6/12 h-24 mb-4">
                         <button
                           type="button"
                           onClick={() =>
