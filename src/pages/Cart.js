@@ -6,11 +6,11 @@ import Sitemap from "parts/Sitemap";
 import ShoppingCart from "parts/Cart/ShoppingCart";
 import ShippingDetail from "parts/Cart/ShippingDetail";
 import useScrrolltoTop from "helpers/hooks/useScrrolltoTop";
+import Document from "parts/Document";
 
 export default function Cart() {
-  useScrrolltoTop(); //kapan pun pindah halaman posisi akan selalu dipaling atas
   return (
-    <>
+    <Document>
       <Header theme="black" />
 
       <Breadcrumb
@@ -30,6 +30,6 @@ export default function Cart() {
 
       <Sitemap />
       <Footer />
-    </>
+    </Document>
   );
 }

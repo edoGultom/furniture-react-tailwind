@@ -1,15 +1,16 @@
-import Clients from "parts/Clients";
-import Footer from "parts/Footer";
-import Header from "parts/Header";
 import Breadcrumb from "components/Breadcrumb";
-import Sitemap from "parts/Sitemap";
-import React, { useEffect } from "react";
+import fetchData from "helpers/fetch";
+import useAsync from "helpers/hooks/useAsync";
+import Clients from "parts/Clients";
 import ProductDetail from "parts/Details/ProductDetail";
 import Suggestion from "parts/Details/Suggestion";
-import useAsync from "helpers/hooks/useAsync";
+import Document from "parts/Document";
+import ErrorMessage from "parts/ErrorMessage";
+import Footer from "parts/Footer";
+import Header from "parts/Header";
+import Sitemap from "parts/Sitemap";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import fetchData from "helpers/fetch";
-import useScrrolltoTop from "helpers/hooks/useScrrolltoTop";
 
 function LoadingProductDetail() {
   return (
@@ -98,10 +99,9 @@ function LoadingSuggestion() {
 }
 
 export default function Details() {
-  useScrrolltoTop(); //kapan pun pindah halaman posisi akan selalu dipaling atas
-  const { data, status, error, run, isLoading } = useAsync();
+  const { data, error, run, isLoading, isError } = useAsync();
   const { idp } = useParams();
-  // console.log(idp);
+
   useEffect(() => {
     run(
       fetchData({
@@ -110,7 +110,7 @@ export default function Details() {
     );
   }, [run, idp]);
   return (
-    <>
+    <Document>
       <Header theme="black" />
       <Breadcrumb
         list={[
@@ -119,16 +119,22 @@ export default function Details() {
           { url: "/categories/9212/products/788997", name: "Details" },
         ]}
       />
-
-      {isLoading ? <LoadingProductDetail /> : <ProductDetail data={data} />}
-      {isLoading ? (
-        <LoadingSuggestion />
+      {isError ? (
+        <ErrorMessage title="Product Not Found" body={error.errors.message} />
       ) : (
-        <Suggestion data={data?.relatedProducts || {}} />
+        <>
+          {isLoading ? <LoadingProductDetail /> : <ProductDetail data={data} />}
+          {isLoading ? (
+            <LoadingSuggestion />
+          ) : (
+            <Suggestion data={data?.relatedProducts || {}} />
+          )}
+        </>
       )}
+
       <Clients />
       <Sitemap />
       <Footer />
-    </>
+    </Document>
   );
 }

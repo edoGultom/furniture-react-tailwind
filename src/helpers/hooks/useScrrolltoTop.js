@@ -3,11 +3,12 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 export default function useScrrolltoTop() {
   const location = useLocation();
+  console.log(location);
   useLayoutEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: "smooth",
     });
-  }, [location.pathname]); //ketika ada perubahaan di pathnamae
+  }, [location.key]); //ketika ada perubahaan di key
 }

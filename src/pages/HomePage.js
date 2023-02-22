@@ -1,21 +1,16 @@
 import Clients from "parts/Clients";
+import Document from "parts/Document";
 import Footer from "parts/Footer";
 import Header from "parts/Header";
-import Hero from "parts/HomePage/Hero";
 import BrowseRoom from "parts/HomePage/BrowseRoom";
+import Hero from "parts/HomePage/Hero";
 import JustArrived from "parts/HomePage/JustArrived";
 import Sitemap from "parts/Sitemap";
-import React from "react";
-import useScrollAnchor from "helpers/hooks/useScrollAnchor";
-import useModalDOM from "helpers/hooks/useModalDOM";
-import useScrrolltoTop from "helpers/hooks/useScrrolltoTop";
 
 export default function HomePage() {
-  useScrollAnchor();
-  useModalDOM();
-  useScrrolltoTop(); //kapan pun pindah halaman posisi akan selalu dipaling atas
   return (
-    <>
+    // pembungkus component wrapper yang terdapat didalamnya (modal, scroll dan lain-lain) <Document>
+    <Document>
       <Header theme="white" position="absolute" />
       <Hero />
       <BrowseRoom />
@@ -23,6 +18,6 @@ export default function HomePage() {
       <Clients />
       <Sitemap />
       <Footer />
-    </>
+    </Document>
   );
 }

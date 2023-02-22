@@ -10,7 +10,10 @@ export default function fetchData({
     headers: { "Content-Type": "application/json" },
     body,
   }).then(async (response) => {
-    const jsonRes = response.status == 200 ? await response.json() : response;
+    const statusHasResponse = [200, 404];
+    const jsonRes = statusHasResponse.includes(response.status)
+      ? await response.json()
+      : response;
     if (response.ok) return jsonRes;
     throw new Error(JSON.stringify(jsonRes));
   });
