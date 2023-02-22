@@ -35,7 +35,7 @@ export default function useAsync(initialState) {
         (error) => {
           safeSetState({
             status: "rejected",
-            error: JSON.stringify(error.message),
+            error: JSON.parse(error.message),
           });
         }
       );
