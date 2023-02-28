@@ -1,12 +1,10 @@
-import React from "react";
-import Header from "parts/Header";
 import Breadcrumb from "components/Breadcrumb";
-import Footer from "parts/Footer";
-import Sitemap from "parts/Sitemap";
-import ShoppingCart from "parts/Cart/ShoppingCart";
 import ShippingDetail from "parts/Cart/ShippingDetail";
-import useScrrolltoTop from "helpers/hooks/useScrrolltoTop";
+import ShoppingCart from "parts/Cart/ShoppingCart";
 import Document from "parts/Document";
+import Footer from "parts/Footer";
+import Header from "parts/Header";
+import Sitemap from "parts/Sitemap";
 
 export default function Cart() {
   return (
