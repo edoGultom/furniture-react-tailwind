@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function useForm(initialState) {
   const [state, setState] = useState(initialState);
