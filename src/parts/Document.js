@@ -3,8 +3,8 @@ import useScrollAnchor from "helpers/hooks/useScrollAnchor";
 import useScrrolltoTop from "helpers/hooks/useScrrolltoTop";
 
 export default function Document({ children }) {
+  useScrrolltoTop();
   useModalDOM();
   useScrollAnchor();
-  useScrrolltoTop();
   return children;
 }

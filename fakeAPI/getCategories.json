@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "id": 1, 
+            "title": "Living Room", 
+            "products": 18309, 
+            "imageUrl": "image-catalog-1.png", 
+            "ratio": {
+                "default": "1/9",
+                "md": "1/4"
+            }
+        },
+        {
+            "id": 2, 
+            "title": "Children Room", 
+            "products": 837, 
+            "imageUrl": "image-catalog-3.png",
+            "ratio": {
+                "default": "1/9",
+                "md": "2/2"
+            }
+        },
+        {
+            "id": 3, 
+            "title": "Decoration", 
+            "products": 77392, 
+            "imageUrl": "image-catalog-4.png",
+            "ratio": {
+                "default": "1/9",
+                "md": "2/3"
+            }
+        },
+        {
+            "id": 4, 
+            "title": "Master Room", 
+            "products": 22094,
+            "imageUrl": "image-catalog-2.png",
+            "ratio": {
+                "default": "1/9",
+                "md": "1/4"
+            }
+        }
+    ]
+}

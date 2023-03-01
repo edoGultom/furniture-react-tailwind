@@ -60,7 +60,8 @@ export default function BrowseRoom() {
   useEffect(() => {
     run(
       fetchData({
-        url: "/api/categories/?page=1&limit=4",
+        // url: "/api/categories/?page=1&limit=4",
+        url: "/api/categories/?_page=1&_limit=4",
       })
     );
   }, [run]);
@@ -103,7 +104,7 @@ export default function BrowseRoom() {
           {isLoading ? (
             <Skeleton ratio={ratioClassNames} />
           ) : (
-            data.data.map((item, index) => {
+            data.map((item, index) => {
               return (
                 <div
                   key={item.id}

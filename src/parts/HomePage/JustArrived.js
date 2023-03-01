@@ -28,7 +28,8 @@ export default function JustArrived() {
   useEffect(() => {
     run(
       fetchData({
-        url: "/api/products/?page=1&limit=10",
+        // url: "/api/products/?page=1&limit=10",
+        url: "/api/products/?_page=1&_limit=10",
       })
     );
   }, [run]);
@@ -57,11 +58,11 @@ export default function JustArrived() {
           </div>
         ) : error ? (
           JSON.stringify(error)
-        ) : data.data.length === 0 ? (
+        ) : data.length === 0 ? (
           "NO products"
         ) : (
           <Carausel refContainer={refContainer}>
-            {data.data.map((item) => {
+            {data.map((item) => {
               return (
                 <div className="px-4 relative card group" key={item.id}>
                   <div

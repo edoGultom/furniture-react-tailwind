@@ -13,7 +13,8 @@ export default function ShippingDetail() {
   useEffect(() => {
     run(
       fetchData({
-        url: `/api/checkout/meta`,
+        // url: `/api/checkout/meta`,
+        url: `/api/meta`,
       })
     );
   }, [run]);

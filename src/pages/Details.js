@@ -105,7 +105,8 @@ export default function Details() {
   useEffect(() => {
     run(
       fetchData({
-        url: `/api/products/${idp}`,
+        // url: `/api/products/${idp}`,
+        url: `/api/detail/${idp}`,
       })
     );
   }, [run, idp]);
@@ -120,7 +121,7 @@ export default function Details() {
         ]}
       />
       {isError ? (
-        <ErrorMessage title="Product Not Found" body={error.errors.message} />
+        <ErrorMessage title="Product Not Found" body={error.message} />
       ) : (
         <>
           {isLoading ? <LoadingProductDetail /> : <ProductDetail data={data} />}

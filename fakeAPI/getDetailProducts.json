@@ -1,0 +1,91 @@
+[
+    {
+        "id": 1,
+        "price": 12000000,
+        "title": "Chair Thatty",
+        "description": "<p class='text-xl leading-7 mb-6'>Tailored to a level of perfection synonymous with that of a Savile Row suit and with understated quality in the detail, Jetty has been influenced by timeless 1950s style.</p><p class='text-xl leading-7 mb-6'>Providing a subtle nod to the past, Jetty also provides a perfect solution for the way we work today. A comprehensive product family, Jetty features a variety of elegant chairs and sofas.</p>",
+        "imgUrls": [
+            "https://luxspace-html.netlify.app/images/content/showcase-1.front.jpg",
+            "https://luxspace-html.netlify.app/images/content/showcase-1.back.jpg",
+            "https://luxspace-html.netlify.app/images/content/showcase-1.rear.jpg",
+            "https://luxspace-html.netlify.app/images/content/showcase-1.side.jpg",
+            "https://luxspace-html.netlify.app/images/content/showcase-1.top.jpg"
+        ],
+        "category": {
+            "id": 1,
+            "title": "Living Room",
+            "products": 18309,
+            "imageUrl": "image-catalog-1.png"
+        },
+        "relatedProducts": [
+            {
+                "id": 1,
+                "idc": "1",
+                "title": "Cangkir Mauttie",
+                "price": 89300000,
+                "imageUrl": "https://luxspace-html.netlify.app/images/content/chair-1.png"
+            },
+            {
+                "id": 2,
+                "idc": "1",
+                "title": "Saman Kakka",
+                "price": 14500399,
+                "imageUrl": "https://luxspace-html.netlify.app/images/content/chair-2.png"
+            },
+            {
+                "id": 3,
+                "idc": "1",
+                "title": "Lino Dino",
+                "price": 22000000,
+                "imageUrl": "https://luxspace-html.netlify.app/images/content/chair-3.png"
+            },
+            {
+                "id": 4,
+                "idc": "1",
+                "title": "Syail Ammeno",
+                "price": 6399999,
+                "imageUrl": "https://luxspace-html.netlify.app/images/content/chair-4.png"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "price": 89300000,
+        "title": "Cangkir Mauttie",
+        "description": "<p class='text-xl leading-7 mb-6'>Tailored to a level of perfection synonymous with that of a Savile Row suit and with understated quality in the detail, Jetty has been influenced by timeless 1950s style.</p>\n<p class='text-xl leading-7 mb-6'>Providing a subtle nod to the past, Jetty also provides a perfect solution for the way we work today. A comprehensive product family, Jetty features a variety of elegant chairs and sofas.</p>",
+        "imgUrls": [
+            "https://luxspace-html.netlify.app/images/content/showcase-1.front.jpg",
+            "https://luxspace-html.netlify.app/images/content/showcase-1.back.jpg",
+            "https://luxspace-html.netlify.app/images/content/showcase-1.rear.jpg",
+            "https://luxspace-html.netlify.app/images/content/showcase-1.side.jpg",
+            "https://luxspace-html.netlify.app/images/content/showcase-1.top.jpg"
+        ],
+        "category": {"id": 1, "title": "Living Room", "products": 18309, "imageUrl": "image-catalog-1.png"},
+        "relatedProducts": [
+            {
+                "id": 1,
+                "idc": "1",
+                "title": "Cangkir Mauttie",
+                "price": 89300000, "imageUrl": "https://luxspace-html.netlify.app/images/content/chair-1.png"
+            },
+            {
+                "id": 2,
+                "idc": "1",
+                "title": "Saman Kakka",
+                "price": 14500399, "imageUrl": "https://luxspace-html.netlify.app/images/content/chair-2.png"
+            },
+            {
+                "id": 3,
+                "idc": "1",
+                "title": "Lino Dino",
+                "price": 22000000, "imageUrl": "https://luxspace-html.netlify.app/images/content/chair-3.png"
+            },
+            {
+                "id": 4,
+                "idc": "1",
+                "title": "Syail Ammeno",
+                "price": 6399999, "imageUrl": "https://luxspace-html.netlify.app/images/content/chair-4.png"
+            }
+        ]
+    }
+  ]

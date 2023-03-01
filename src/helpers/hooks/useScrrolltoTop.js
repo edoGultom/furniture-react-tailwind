@@ -1,9 +1,9 @@
 import { useLayoutEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 export default function useScrrolltoTop() {
   const location = useLocation();
-
+  console.log(location);
   useLayoutEffect(() => {
     window.scrollTo({
       top: 0,
